@@ -1,0 +1,79 @@
+.header {
+	font-family: Geostar;
+	background-color: #9370DB;
+	padding: 20px;
+	border: 2px #9370DB solid;
+}
+
+
+h2 {
+	padding: 10px;
+	font-style: bold;
+}
+.about {
+	background-color: #b666d1;
+	color: white;
+	font-family: Helvetica;
+	font-style: italic;
+	font-size: 18px;
+}
+html {
+	background-color: #d2a1e3;
+	font-family: "Bree Serif";
+}
+
+.image {
+	opacity: 0.5;
+}
+.tab {
+	margin-left: 40px;
+}
+
+.grid {
+  border: 2px pink solid;
+  height: 600px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 150px 150px 150px 150px;
+  grid-gap: 10px 15px;
+
+}
+
+
+
+.box {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  border: 2px pink solid;
+ 
+}
+.table {
+	display: table;
+	margin: 0 auto;
+}
+
+ul#nav {
+	min-width:696;
+	word-spacing: 300px;
+}
+ul#nav {
+	background-color: white;
+	color: white;
+	min-width:696 px;
+	list-style: none;
+	padding-top: 20px;
+	padding-left: 68px;
+	padding-right: 68px;
+	padding-bottom: 20px;
+
+}
+ul#nav li {
+	display: inline;
+}
+
+.navi {
+	text-decoration: none;
+	color: #301934;
+}
