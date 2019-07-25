@@ -1,8 +1,10 @@
 .header {
-	font-family: Geostar;
-	background-color: #9370DB;
+	font-family: "Press Start 2P";
+	background-color: #30113b;
+	color: #6682d2;
 	padding: 20px;
 	border: 2px #9370DB solid;
+	text-shadow: 2px 2px yellow;
 }
 
 
@@ -32,7 +34,7 @@ html {
 .grid {
   border: 2px pink solid;
   height: 600px;
-  width: 500px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 150px 150px 150px 150px 150px;
@@ -40,11 +42,29 @@ html {
 
 }
 
+.grid2 {
+  border: 2px pink solid;
+  background-size: cover;
+  display: grid;
+  height:550px;
+  width: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  grid-gap: 10px 15px;
+}
+
+.aboutme {
+  background-color: #30113b;
+  color: white;
+  border-radius: 10px;
+  border: 2px pink solid;
+}
+
 
 
 .box {
-  background-color: white;
-  color: black;
+  background-color: #30113b;
+  color: white;
   border-radius: 10px;
   border: 2px pink solid;
  
@@ -59,21 +79,59 @@ ul#nav {
 	word-spacing: 300px;
 }
 ul#nav {
-	background-color: white;
-	color: white;
-	min-width:696 px;
+	background-color: #30113b;
+	font-color: white;
+	min-width:696px;
 	list-style: none;
 	padding-top: 20px;
 	padding-left: 68px;
 	padding-right: 68px;
 	padding-bottom: 20px;
-
 }
 ul#nav li {
 	display: inline;
+	width: 100%;
 }
 
 .navi {
 	text-decoration: none;
-	color: #301934;
+	color: white;
+}
+.home {
+	text-decoration: none;
+	
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a .resourcelink {
+	text-decoration: none;
+
+	color: white;
+}
+
+.navgrid {
+  border: 2px pink solid;
+  background-size: cover;
+  display: grid;
+  height: 100px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px;
+
+}
+
+.nav {
+  background-color: #30113b;
+  color: white;
+  font-size: 25px;
+  align-items: center;
+  border: 2px pink solid;
+  text-align: center;
+}
+
+.submit {
+	
 }
