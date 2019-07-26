@@ -20,7 +20,7 @@
 
 <body>
 
-<form action="/example.html" method="POST">
+<form id="frm1">
 	<h1>Quiz 1</h1>
 	<p>This quiz will consist of multiple multiple (iteration) choice questions. You have unlimited time and can take the quiz for practice after submission. </p>
 
@@ -41,14 +41,41 @@
     		<div class="box three">Q3</div>
     		<div class="box four">Q4</div>
     		<div class="box five">Q5</div>
+    		</form>
   		</div>
   		<br><br><br><br><br><br><br><br><br>
 
 
-  		<input type = "submit" value="Submit" style="margin-left: 50%" action="./results.html"> 
+  		<input type = "button" value="Submit" style="margin-left: 50%"> 
 	
  	
-</form>
+<p id = "result"></p>
+
+<!-- <script>
+	var form = document.getElementbyId('frm1');
+	form.onsubmit = function(e) {
+		e.preventDefault();
+		var result = document.getElementById('result');
+		result.innerHTML = "Hello" +form.answer.value;
+	}
+</script> -->
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("input[type='button']").click(function(){
+            var radioValue = $("input[name='answer']:checked").val();
+            if(radioValue == "B"){
+                alert("Your are correct!");
+            }
+            else {
+            	alert("That's wrong!");
+            }
+        });
+        
+    });
+</script>
+
 </body>
 
 
