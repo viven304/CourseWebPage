@@ -1,56 +1,91 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
+<div id="sqr" data-photoHiddenClass="photoToEnlarge"></div>
+<div class="square" id="sqr2"></div>
+<div class="square" id="sqr3"></div>
+<div class="square" id="sqr4"></div>
+<img id= "photo1hide" class = "photoToEnlarge" src="picture1.jpg">
+<img id= "photo2hide" class = "photoToEnlarge" src="picture2.jpg">
+<img id= "photo3hide" class = "photoToEnlarge" src="picture3.jpg">
+<img id= "photo4hide" class = "photoToEnlarge" src="picture4.jpg">
+
+
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Geostar&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+
+    <title>Fake Realtors</title>
+
+    <div class="heading">
+        <h1>Fake Realtors</h1>
+   </div>
 
 </head>
-<div class = "header">
-	<title> Intro to C++ </title>
-	<a class="home" href="./index.html"> <h1>INTRO TO C++ <h1> </a>
+
+<body>
+
+    
+<div id="content"> 
+
+    <!-- Use of Google Maps API-->
+        <div id="map"></div>
+            <script>
+        // Initialize and add the map
+                function initMap() {
+                    // The location of Uluru
+                    var uluru = {lat: 49.262564, lng: -123.256456};
+                    // The map, centered at Uluru
+                    var map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 15, center: uluru});
+                    // The marker, positioned at Uluru
+                    var marker = new google.maps.Marker({position: uluru, map: map});
+                }
+
+            </script>
+            <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlYjSiXpmXkIxkQTjukrr_oz4ToVN5naQ&callback=initMap" type="text/javascript">
+            </script>
+            <br><br><br>
+
+<div class="grid">
+        <div class="box">
+            <img id= "photo1" class = "photoToDisplay" src="picture1.jpg" data-photoId="photo1" data-photoHiddenId="photo1hide">
+        </div>
+        <div class="box">
+            <img id= "photo2" class = "photoToDisplay" src="picture2.jpg" data-photoId="photo2" data-photoHiddenId="photo2hide">
+        </div>
+        <div class="box">
+            <img id= "photo3" class = "photoToDisplay" src="picture3.jpg" data-photoId="photo3" data-photoHiddenId="photo3hide">
+        </div>
+        <div class="box">
+            <img id= "photo4" class = "photoToDisplay"src="picture4.jpg" data-photoId="photo4" data-photoHiddenId="photo4hide">
+        </div>
 </div>
 
-<!-- <div class="table">
-	<ul id = "nav">
-		<li><a class= "navi" href="./quizzes.html">Quizzes</a></li>
-		<li><a class = "navi" href="./starters.html">Starters</a></li>
-		<li><a class = "navi" href="./resources.html">Resources</a></li>
-	</ul>
-</div> -->
 
-<div class="navgrid">
-	<div class = "nav">
-		<div class="dropdown">
-  			<button class="dropbtn">Quizzes</button>
-  			<div class="dropdown-content">
-    			<a href="./pointerquiz.html">PointerQuiz</a>
-    			<a href="#">Link 2</a>
-    			<a href="#">Link 3</a>
-  			</div>
-		</div>
-	</div>
-	<div class = "nav">
-		<a class = "navi" href="./starters.html">Starters</a>
-	</div>
-	<div class = "nav">
-		<a class = "navi" href="./resources.html">Resources</a>
-	</div>
+
+<form id="createNewListing" method="POST" action="/api/listings">
+    <p> Create new listing</p>
+    <label for="listingName"> Enter name:</label>
+    <input type ="text" id="listingName" name="name" value="Enter text here">
+
+    <input type="submit" value="Submit">
+
+</form>
 </div>
 
-
-
-
-<div class="grid2">
-    <div class="aboutme">
-    	<p> Welcome to the C++ course by UBC Future Global Leaders. It will be your quick guide to doing well in your first year. </p>
-    </div>
-</div> 
-
-
-
-
+<script src="jquery-3.4.1.min.js"></script>
+<script src="index.js"></script>
+</body>
 </html>
