@@ -1,48 +1,58 @@
-$(function() {
+function hideOverlay() {
+    $(function() {
+        $('#sqr').slideToggle();
+        $("#textOnOverlay").slideToggle();
+    })
+}
 
-    $('.photoToEnlarge').hide();
-    $('#sqr').hide();
-    $('#sqr2').hide();
-
-    $('.photoToDisplay').on('mouseover', function() {
-        let photoId = $(this).attr('data-photoId');
-        $('#' + photoId).animate({
+function reduceOpacity1() {
+    $(function() {
+        $(".1").animate({
             opacity: '-=0.5'
-        });
+          });
     });
+}
 
-    $('.photoToDisplay').on('mouseleave', function() {
-        let photoId = $(this).attr('data-photoId');
-        $('#' + photoId).animate({
+
+function increaseOpacity1() {
+    $(function() {
+        $(".1").animate({
             opacity: '+=0.5'
-        });
+          });
     });
+}
 
-    $('.photoToDisplay').on('click', function() {
-        let photoHiddenId = $(this).attr('data-photoHiddenId');
-        $('#' + photoHiddenId).show();
-        $('#sqr').show();
+function reduceOpacity2() {
+    $(function() {
+        $(".2").animate({
+            opacity: '-=0.5'
+          });
     });
+}
 
-    $('#sqr').on('click', function() {
-        let photoHiddenId = $(this).attr('data-photoHiddenClass');
-        $('.' + photoHiddenId).hide();
-        $('#sqr').hide();
-        $('#sqr2').hide();
+
+function increaseOpacity2() {
+    $(function() {
+        $(".2").animate({
+            opacity: '+=0.5'
+          });
     });
+}
 
-    $('#sqr').on('mousemove', function(e) {
 
-        let percentageInX = e.pageX;
-        let percentageInY = e.pageY;
-
-        $("#sqr2").css({
-            'left': percentageInX,
-            'top': percentageInY
-
-        });
-        $("#sqr2").show();
-
+function reduceOpacity3() {
+    $(function() {
+        $(".3").animate({
+            opacity: '-=0.5'
+          });
     });
-});
+}
 
+
+function increaseOpacity3() {
+    $(function() {
+        $(".3").animate({
+            opacity: '+=0.5'
+          });
+    });
+}

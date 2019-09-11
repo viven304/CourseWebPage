@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 
 <html>
 <head>
@@ -19,6 +19,7 @@
 </div>
 
 <body>
+
 
 <form id="frm1" method="post">
 	<h1>Quiz 1</h1>
@@ -69,7 +70,7 @@
 	}
 </script> -->
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $("input[type='button']").click(function(){
@@ -84,8 +85,9 @@
         
     });
 </script>
-
-
+ -->
+<? php echo $_POST['answer1'];
+?>
 </body>
 
 
